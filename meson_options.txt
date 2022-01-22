@@ -1,0 +1,3 @@
+option('eet',
+       type       : 'string',
+       description: 'A path to the eet command. Defaults to system eet')

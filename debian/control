@@ -1,0 +1,15 @@
+Source: bodhi-profile-iso
+Section: x11
+Priority: optional
+Maintainer: Robert Wiley <ylee@bodhilinux.com>
+Homepage: http://mokshadesktop.org/
+Build-Depends:  debhelper (>= 9), dh-autoreconf, libefl-dev, moksha-dev
+Standards-Version: 4.1.4
+
+Package: bodhi-profile-iso
+Architecture: all
+Section: x11
+Priority: optional
+Depends: ${misc:Depends}
+Description: Bodhi CD Profile
+ Contains Bodhi's ISO profile.

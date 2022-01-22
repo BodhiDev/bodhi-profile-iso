@@ -1,0 +1,5 @@
+bodhi-profile-iso (0.2) focal; urgency=low
+
+  * BL6.1 build
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sat, 22 Jan 2022 10:50:09 -0500
