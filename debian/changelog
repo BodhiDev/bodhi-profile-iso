@@ -1,3 +1,9 @@
+bodhi-profile-iso (0.2) jammy; urgency=low
+
+  * Reflect Moksha and theme changes
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Tue, 02 May 2023 07:01:41 -0400
+
 bodhi-profile-iso (0.1) jammy; urgency=low
 
   * BL7.0 build
