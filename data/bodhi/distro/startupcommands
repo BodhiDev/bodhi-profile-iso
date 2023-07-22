@@ -1,7 +1,15 @@
 #!/bin/bash
 
-LANG2=$(echo "${LANG%"${LANG#??}"}" | awk '{print toupper($0)}')
 QSPATH=/usr/share/bodhi/quickstart
+start_path="/home/$USER/.e/e/applications/startup/startupcommands"
+
+if [ "$LANG" != "pt_BR.UTF-8" ]; then
+  # First two letters of the locale variable LANG
+  LANG2=$(echo "${LANG%"${LANG#??}"}" | awk '{print toupper($0)}')
+else
+  LANG2="PT_BR"
+fi
+
 if [ -f "/etc/chromium/master_preferences" ] && [ -f "$QSPATH/quickstart$LANG2/landing.html" ]; then
 	sed -i "s/quickstartEN/quickstart$LANG2/" /etc/chromium/master_preferences
 fi
@@ -11,6 +19,14 @@ if [ -f "/usr/share/chromium/initial_bookmarks.html" ] && [ -f "$QSPATH/quicksta
 	if [ -f "$QSPATH/quickstart$LANG2/title" ]; then
 		TITLE=$(cat "$QSPATH/quickstart$LANG2/title")
 		sed -i "s/Quick Start/$TITLE/" /usr/share/chromium/initial_bookmarks.html
+	fi
+fi
+
+elaptopcheck &
+
+if [ -f "$start_path" ]; then
+	if [[ -n "$E_RESTART" ]]; then
+		> "$start_path"
 	fi
 fi
 
