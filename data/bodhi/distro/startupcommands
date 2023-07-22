@@ -1,0 +1,17 @@
+#!/bin/bash
+
+LANG2=$(echo "${LANG%"${LANG#??}"}" | awk '{print toupper($0)}')
+QSPATH=/usr/share/bodhi/quickstart
+if [ -f "/etc/chromium/master_preferences" ] && [ -f "$QSPATH/quickstart$LANG2/landing.html" ]; then
+	sed -i "s/quickstartEN/quickstart$LANG2/" /etc/chromium/master_preferences
+fi
+
+if [ -f "/usr/share/chromium/initial_bookmarks.html" ] && [ -f "$QSPATH/quickstart$LANG2/index.html" ]; then
+	sed -i "s/quickstartEN/quickstart$LANG2/" /usr/share/chromium/initial_bookmarks.html
+	if [ -f "$QSPATH/quickstart$LANG2/title" ]; then
+		TITLE=$(cat "$QSPATH/quickstart$LANG2/title")
+		sed -i "s/Quick Start/$TITLE/" /usr/share/chromium/initial_bookmarks.html
+	fi
+fi
+
+exit 0

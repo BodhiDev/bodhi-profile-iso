@@ -2,7 +2,7 @@ Source: bodhi-profile-iso
 Section: x11
 Priority: optional
 Maintainer: Robert Wiley <ylee@bodhilinux.com>
-Homepage: http://mokshadesktop.org/
+Homepage: https://www.bodhilinux.com/
 Build-Depends:  debhelper (>= 9), dh-autoreconf, libefl-dev, moksha-dev
 Standards-Version: 4.1.4
 
