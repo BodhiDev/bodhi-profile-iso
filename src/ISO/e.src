@@ -1376,7 +1376,7 @@ group "E_Config" struct {
             value "params" string: "default right";
             value "any_mod" uchar: 0;
         }
-         group "E_Config_Binding_Key" struct {
+        group "E_Config_Binding_Key" struct {
             value "context" int: 9;
             value "modifiers" int: 8;
             value "key" string: "F1";
