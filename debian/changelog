@@ -1,3 +1,10 @@
+bodhi-profile-iso (0.3) jammy; urgency=low
+
+  * iBar version added
+  * iBar moksha mode added
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Mon, 25 Sep 2023 13:23:55 -0400
+
 bodhi-profile-iso (0.2) jammy; urgency=low
 
   * Reflect Moksha and theme changes
