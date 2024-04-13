@@ -1107,6 +1107,13 @@ group "E_Config" struct {
         group "E_Config_Binding_Key" struct {
             value "context" int: 9;
             value "modifiers" int: 0;
+            value "key" string: "Super_L";
+            value "action" string: "everything";
+            value "any_mod" uchar: 0;
+        }
+        group "E_Config_Binding_Key" struct {
+            value "context" int: 9;
+            value "modifiers" int: 0;
             value "key" string: "XF86Sleep";
             value "action" string: "suspend";
             value "params" string: "now";
@@ -1560,6 +1567,13 @@ group "E_Config" struct {
         group "E_Config_Binding_Key" struct {
             value "context" int: 9;
             value "modifiers" int: 6;
+            value "key" string: "o";
+            value "action" string: "touchpad_toggle";
+            value "any_mod" uchar: 0;
+        }
+        group "E_Config_Binding_Key" struct {
+            value "context" int: 9;
+            value "modifiers" int: 6;
             value "key" string: "w";
             value "action" string: "window_menu";
             value "any_mod" uchar: 0;
@@ -1919,7 +1933,7 @@ group "E_Config" struct {
             value "priority" int: -1000;
         }
     }
-    value "config_version" int: 1000019;
+    value "config_version" int: 1000021;
     value "show_splash" int: 1;
     value "init_default_theme" string: "/usr/share/enlightenment/data/themes/MokshaGreen.edj";
     value "desktop_default_name" string: "%i-%i";
@@ -2076,6 +2090,7 @@ group "E_Config" struct {
     value "touch_scrolling_circular" uchar: 0;
     value "touch_scrolling_horiz" uchar: 0;
     value "touch_palm_detect" uchar: 1;
+    value "touch_off" uchar: 0;
     value "border_raise_on_mouse_action" int: 1;
     value "border_raise_on_focus" int: 1;
     value "desk_flip_wrap" int: 1;
@@ -2162,6 +2177,7 @@ group "E_Config" struct {
     value "update.later" uchar: 0;
     value "xkb.only_label" int: 1;
     value "xkb.default_model" string: "default";
+    value "xkb.wins_xkb" int: 0;
     group "xkb.current_layout" struct {
         group "E_Config_XKB_Layout" struct {
             value "name" string: "us";
