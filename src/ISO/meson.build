@@ -3,7 +3,7 @@ dir_config = join_paths(dir_data, 'enlightenment/data/config')
 ##### eet data compression tool
 eet_cmd = get_option('eet')
 if eet_cmd == ''
-  eet_cmd = join_paths(dep_eet.get_pkgconfig_variable('prefix'),
+  eet_cmd = join_paths(dep_eet.get_variable('prefix'),
                         'bin', 'eet')
 endif
 
